@@ -11,4 +11,21 @@ returns {"A": 3, "C": 1, "G": 1, "T": 2}
 """
 
 def ntcount(dna):
-  pass  # delete this line when you start writing your code
+  for letter in dna:
+    if letter != "A" and letter != "C" and letter != "G" and letter != "T":
+      return "error"
+  dnaseq = {}
+  for letter in dna:
+    dnaseq.setdefault (letter,0)
+    dnaseq [letter] += 1
+  return dnaseq
+  print (ntcount(dna))
+
+
+
+"""
+elif part == "B":
+  from Bntcount import ntcount
+  for sequence in dna:
+    print(sequence, "counts:", ntcount(sequence))
+"""    
